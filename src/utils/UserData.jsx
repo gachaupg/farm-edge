@@ -1,0 +1,73 @@
+export const usersItems=[
+    {item:'phone',
+    price:'2000',
+    discountPrice:'200',
+    discountPercentage:'10%',
+    image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRSpyXr-uImqTp1r6Ox4VGeg_IsONXxVl4kA&usqp=CAU",
+    
+},
+
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+},
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.pexels.com/photos/5703527/pexels-photo-5703527.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+},
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://media.istockphoto.com/id/1174207130/photo/wall-of-retro-vintage-style-music-sound-speakers.jpg?b=1&s=612x612&w=0&k=20&c=-KTkS5LkNAaPUP5f5MwG5Pl2rsgFDHfo5VQmeJxapPw=",
+
+},
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+},  
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=600",
+
+}, 
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.unsplash.com/photo-1593121925328-369cc8459c08?auto=format&fit=crop&w=286",
+
+}, 
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.unsplash.com/photo-1593121925328-369cc8459c08?auto=format&fit=crop&w=286",
+
+}, 
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.unsplash.com/photo-1593121925328-369cc8459c08?auto=format&fit=crop&w=286",
+
+}, 
+{item:'phone',
+price:'2000',
+discountPrice:'200',
+discountPercentage:'10%',
+image:"https://images.unsplash.com/photo-1593121925328-369cc8459c08?auto=format&fit=crop&w=286",
+
+}, 
+]
