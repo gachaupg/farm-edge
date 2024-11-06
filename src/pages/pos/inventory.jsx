@@ -141,12 +141,12 @@ const Sales = () => {
 
     const postData = {
       item: selectedProduct,
-      category: "Record",
+      category: "Store",
       unitMeasure: selectedUnit,
       amount: Number(amount),
       remarks: description,
       quantity: Number(quantity),
-      type: "Record",
+      type: "Store",
       farm: user?.user?.farm,
       worker: user?.user?.name,
       token: user?.user?.token || "",
@@ -158,8 +158,8 @@ const Sales = () => {
         "https://shamba-new-sever.netlify.app/.netlify/functions/api/pos/create",
         postData
       );
-      console.log("Record added:", response.data);
-      toast.success("Record added successfully");
+      console.log("Store added:", response.data);
+      toast.success("Store added successfully");
       navigate("/");
       setLoad(false);
       // Optionally clear fields or update state with new record

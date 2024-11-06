@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import {
   Routes,
@@ -41,6 +41,7 @@ import Addmembers from "./pages/pos/Addmembers";
 import Next from "./pages/pos/Next";
 import Calculations from "./pages/pos/calculations";
 import { Avatar } from "@mui/material";
+import Records from "./pages/pos/Records";
 const drawerWidth = 240;
 
 function ResponsiveDrawer(props) {
@@ -51,6 +52,11 @@ function ResponsiveDrawer(props) {
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    if (user === null) {
+      navigate("/login");
+    }
+  }, [navigate, user]);
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -246,6 +252,7 @@ function ResponsiveDrawer(props) {
           <Route path="/add workers" element={<Addmembers />} />
           <Route path="/next" element={<Next />} />
           <Route path="/calculations" element={<Calculations />} />
+          <Route path="/records" element={<Records />} />
           <Route path="*" element={<h1>Not Found</h1>} />
         </Routes>
       </Box>
