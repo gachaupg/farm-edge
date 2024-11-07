@@ -99,7 +99,7 @@ const Login = () => {
           />
         </div>
         <div className="flex flex-col w-full">
-          <h4 className="text-2xl font-semibold text-gray-700 mb-2">Welcome</h4>
+          <h4 className="text-2xl font-semibold text-gray-700 mb-2">Welcome to FarmEdge</h4>
           <p className="text-gray-600 mb-6">Please Login</p>
 
           {/* Phone Number Input */}
