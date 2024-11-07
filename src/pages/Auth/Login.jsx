@@ -72,71 +72,79 @@ const Login = () => {
   };
   return (
     <motion.div
-    initial={{ opacity: 0, x: -50 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.5 }}
-    className="h-full w-full small"
-  >
-    <div
-      style={
-        {
-          // width: "90%",
-        }
-      }
-      className="flex flex-row border p-3 gap-20  items-center justify-center  mt-10 w-full"
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5 }}
+      className="h-full w-full flex items-center justify-center "
     >
-      <div>
-        <img
-          className="w-full"
-          src="https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt=""
-        />
-      </div>
-      <div className="flex flex-col ">
-        <div className=" flex flex-col  ">
-          <h4 className="text-lg font-semibold">Welcome</h4>
-          <p>Please Login</p>
-          <label className="mt-3" htmlFor="">
+      <div
+        style={{
+          width: "80%",
+        }}
+        className="flex flex-row border border-gray-300 rounded-lg shadow-lg p-6 gap-12 items-center bg-white w-full max-w-3xl"
+      >
+        <div className="w-1/2">
+          <img
+            className="w-full rounded-lg object-cover"
+            src="https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg?auto=compress&cs=tinysrgb&w=600"
+            alt="Login Image"
+          />
+        </div>
+        <div className="flex flex-col w-1/2">
+          <h4 className="text-2xl font-semibold text-gray-700 mb-2">Welcome</h4>
+          <p className="text-gray-600 mb-6">Please Login</p>
+
+          {/* Phone Number Input */}
+          <label className="text-gray-700 mb-1" htmlFor="phone">
             Phone Number
           </label>
-          <div className="flex gap-2  w-96 items-center   border rounded-2xl border-slate-400">
-            <Phone className="green" color="green" />
+          <div className="flex gap-2 w-full items-center border border-slate-300 p-1 rounded-xl  mb-4">
+            <Phone className="text-green-500" />
             <input
+              id="phone"
               onChange={(e) => setUser({ ...user, phone: e.target.value })}
               type="number"
-              style={{ width: "90%" }}
-              className=" pl-2 h-8 no-border"
+              className="flex-1 pl-2 h-8 text-gray-700 border-none outline-none"
+              placeholder="Enter your phone number"
             />
           </div>
-          <label className="mt-3" htmlFor="">
+
+          {/* Password Input */}
+          <label className="text-gray-700 mb-1" htmlFor="password">
             Password
           </label>
-          <div className="flex gap-2  w-96 items-center   border rounded-2xl border-slate-400">
-            <Lock className="green" color="green" />
+          <div className="flex gap-2 w-full items-center border border-slate-300 rounded-xl p-1 mb-4">
+            <Lock className="text-green-500" />
             <input
+              id="password"
               onChange={(e) => setUser({ ...user, password: e.target.value })}
               type="password"
-              className=" w-full pl-2 h-8 no-border"
+              className="flex-1 pl-2 h-8 text-gray-700 border-none outline-none"
+              placeholder="Enter your password"
             />
           </div>
+
+          {/* Submit Button or Loading Indicator */}
           {loading ? (
-            <div className="flex items-center mt-2 justify-center">
-              <CircularProgress className="green" />
+            <div className="flex items-center justify-center mt-4">
+              <CircularProgress className="text-green-500" />
             </div>
           ) : (
             <button
               onClick={handleSubmit}
-              className="greenbg white rounded-2xl w-96 p-1 mt-3"
+              className="w-full bg-green-500 text-white font-semibold rounded-xl py-2 mt-4 hover:bg-green-600 transition-colors"
             >
               Login
             </button>
           )}
-          {errors.form && <p className="text-red-500 text-sm">{errors.form}</p>}
+
+          {/* Error Message */}
+          {errors.form && (
+            <p className="text-red-500 text-sm mt-2">{errors.form}</p>
+          )}
         </div>
       </div>
-    </div>
     </motion.div>
-
   );
 };
 
