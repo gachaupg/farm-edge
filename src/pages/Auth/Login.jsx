@@ -72,25 +72,33 @@ const Login = () => {
   };
   return (
     <motion.div
+      style={{
+        width: "100%",
+      }}
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
-      className="h-full w-full flex items-center justify-center "
+      className="h-full w-full flex  h-auto mt-1 justify-center "
     >
       <div
         style={{
           width: "80%",
+          height: "80%",
         }}
-        className="flex flex-row border border-gray-300 rounded-lg shadow-lg p-6 gap-12 items-center bg-white w-full max-w-3xl"
+        className="flex flex-row w-full  border border-gray-300 rounded-lg shadow-lg p-6
+         gap-12 items-center bg-white w-full "
       >
-        <div className="w-1/2">
+        <div className="w-full">
           <img
-            className="w-full rounded-lg object-cover"
+            style={{
+              width: "100%",
+            }}
+            className=" rounded-lg object-cover"
             src="https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg?auto=compress&cs=tinysrgb&w=600"
             alt="Login Image"
           />
         </div>
-        <div className="flex flex-col w-1/2">
+        <div className="flex flex-col w-full">
           <h4 className="text-2xl font-semibold text-gray-700 mb-2">Welcome</h4>
           <p className="text-gray-600 mb-6">Please Login</p>
 
